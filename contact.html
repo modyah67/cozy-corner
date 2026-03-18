@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>تواصلوا معانا - Cozy Corner Café</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="كافيه القاهرة, حجز طاولة, حجز عيد ميلاد, واتساب مقهى, عنوان Cozy Corner">
+    <meta name="description" content="تواصلوا مع Cozy Corner Café - حجز طاولات عادية أو أعياد ميلاد، استفسارات، موقعنا في المعادي">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap & Style -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .birthday-note {
+            background: #fff3e0;
+            border: 2px solid #ffca28;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">جاري التحميل...</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid bg-light sticky-top p-0">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a href="index.html" class="navbar-brand bg-primary py-4 px-5 me-0">
+                <h1 class="mb-0 text-white">Cozy Corner</h1>
+            </a>
+            <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-3" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.html" class="nav-item nav-link">الرئيسية</a>
+                    <a href="about.html" class="nav-item nav-link">عن المقهى</a>
+                    <a href="service.html" class="nav-item nav-link">المنيو</a>
+                    <a href="contact.html" class="nav-item nav-link active">تواصلوا معانا</a>
+                </div>
+                <a class="btn btn-sm btn-primary rounded-pill px-4 text-white" href="https://wa.me/201105263199?text=مرحبا" target="_blank">
+                    تواصل على واتساب
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-primary mb-3 animated slideInDown">تواصلوا معانا</h1>
+            <p class="fs-4 text-dark mb-0">جاهزين نساعدك في الحجز أو أي استفسار</p>
+        </div>
+    </div>
+
+    <!-- Contact & Booking Section -->
+    <div class="container py-5">
+        <div class="row g-5">
+            <!-- Left Column: Form + Booking Info -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <!-- Birthday Booking Note -->
+                <div class="birthday-note text-center">
+                    <h4 class="text-primary mb-3">حجز أعياد ميلاد مميز</h4>
+                    <p class="mb-2">نسعد بتجهيز أعياد الميلاد في المقهى!</p>
+                    <p class="mb-1"><strong>الأسعار التقريبية:</strong></p>
+                    <ul class="list-unstyled mb-3">
+                        <li>5–8 أشخاص: 1,500 – 2,500 جنيه</li>
+                        <li>9–15 شخص: 3,000 – 5,000 جنيه</li>
+                        <li>16+ شخص: تبدأ من 6,000 جنيه</li>
+                    </ul>
+                    <p class="small text-muted">السعر يشمل ديكور بسيط + كيك + مشروبات (حسب العدد)</p>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="mb-4 text-primary">احجز طاولتك أو استفسر</h3>
+                    <form id="contactForm">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="form-label">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="c_name" placeholder="محمد أحمد" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">رقم التليفون</label>
+                                <input type="tel" class="form-control" id="c_phone" placeholder="01105263199" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">نوع الحجز</label>
+                                <select class="form-select" id="c_type" required>
+                                    <option value="">اختر نوع الحجز</option>
+                                    <option value="عادي">حجز عادي (جلسة عادية)</option>
+                                    <option value="عيد ميلاد">حجز عيد ميلاد / مناسبة</option>
+                                    <option value="استفسار">استفسار فقط</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6" id="birthday_extra" style="display:none;">
+                                <label class="form-label">عدد الشموع / العمر</label>
+                                <input type="text" class="form-control" id="c_age" placeholder="مثال: 25 سنة">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">التاريخ المطلوب</label>
+                                <input type="date" class="form-control" id="c_date" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">الوقت المفضل</label>
+                                <select class="form-select" id="c_time" required>
+                                    <option value="">اختر الوقت</option>
+                                    <option value="12:00 ظهرًا">12:00 ظهرًا</option>
+                                    <option value="1:00 عصرًا">1:00 عصرًا</option>
+                                    <option value="2:00 عصرًا">2:00 عصرًا</option>
+                                    <option value="3:00 عصرًا">3:00 عصرًا</option>
+                                    <option value="4:00 عصرًا">4:00 عصرًا</option>
+                                    <option value="5:00 عصرًا">5:00 عصرًا</option>
+                                    <option value="6:00 مساءً">6:00 مساءً</option>
+                                    <option value="7:00 مساءً">7:00 مساءً</option>
+                                    <option value="8:00 مساءً">8:00 مساءً</option>
+                                    <option value="9:00 مساءً">9:00 مساءً</option>
+                                    <option value="10:00 مساءً">10:00 مساءً</option>
+                                    <option value="11:00 مساءً">11:00 مساءً</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">عدد الأفراد</label>
+                                <select class="form-select" id="c_persons" required>
+                                    <option value="">اختر العدد</option>
+                                    <option value="1">1 شخص</option>
+                                    <option value="2">2 شخص</option>
+                                    <option value="3">3 أشخاص</option>
+                                    <option value="4">4 أشخاص</option>
+                                    <option value="5">5 أشخاص</option>
+                                    <option value="6">6 أشخاص</option>
+                                    <option value="7-8">7-8 أشخاص</option>
+                                    <option value="9-12">9-12 شخص</option>
+                                    <option value="13+">أكثر من 12</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">مكان الطاولة المفضل (اختياري)</label>
+                                <select class="form-select" id="c_location">
+                                    <option value="">لا يهم</option>
+                                    <option value="قرب الشباك">قرب الشباك (إطلالة)</option>
+                                    <option value="منطقة هادئة">منطقة هادئة (داخلية)</option>
+                                    <option value="منطقة الشيشة">منطقة الشيشة</option>
+                                    <option value="منطقة مفتوحة">منطقة مفتوحة / خارجية</option>
+                                    <option value="مناسبة للأطفال">مناسبة للأطفال</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">ملاحظات إضافية (مثال: ديكور عيد ميلاد، نوع الكيك، نكهة الشيشة...)</label>
+                                <textarea class="form-control" id="c_notes" rows="4" placeholder="اكتب أي تفاصيل إضافية..."></textarea>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="button" class="btn btn-primary btn-lg px-5 py-3" onclick="sendBookingToWhatsApp()">
+                                    أرسل الحجز على واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column: Map + Hours -->
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                <h3 class="mb-4 text-primary">موقعنا</h3>
+                <div class="rounded overflow-hidden shadow" style="height: 400px;">
+                    <!-- ← غير الرابط ده بعنوان المقهى الحقيقي من Google Maps -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.389!2d31.232918!3d30.0589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458418b6a5d8d1b%3A0x9e9d5b6a5d8d1b!2sMokhtar%20Ismail%20Centre!5e0!3m2!1sen!2seg!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="text-center mt-3">
+                    <a class="btn btn-primary px-4 py-2" href="https://maps.app.goo.gl/xxxxxxxx" target="_blank">
+                        افتح على جوجل مابس
+                    </a>
+                </div>
+
+                <div class="mt-5">
+                    <h4 class="text-primary">ساعات العمل</h4>
+                    <ul class="list-unstyled fs-5">
+                        <li><i class="bi bi-clock me-2"></i>السبت - الخميس: 8:00 صباحًا - 12:00 منتصف الليل</li>
+                        <li><i class="bi bi-clock me-2"></i>الجمعة: 10:00 صباحًا - 1:00 صباحًا</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (نفس اللي في الصفحات السابقة) -->
+    <!-- يمكنك نسخ الفوتر من index.html أو about.html هنا -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- WhatsApp Booking Script -->
+    <script>
+    // إظهار/إخفاء حقل العمر عند اختيار عيد ميلاد
+    document.getElementById('c_type').addEventListener('change', function() {
+        const birthdayField = document.getElementById('birthday_extra');
+        if (this.value === 'عيد ميلاد') {
+            birthdayField.style.display = 'block';
+        } else {
+            birthdayField.style.display = 'none';
+        }
+    });
+
+    function sendBookingToWhatsApp() {
+    const name = document.getElementById('c_name').value.trim();
+    const phone = document.getElementById('c_phone').value.trim();
+    const type = document.getElementById('c_type').value;
+    const date = document.getElementById('c_date').value;
+    const time = document.getElementById('c_time').value;
+    const persons = document.getElementById('c_persons').value;
+    const location = document.getElementById('c_location').value;
+    const notes = document.getElementById('c_notes').value.trim();
+    const age = document.getElementById('c_age').value.trim();
+
+    if (!name || !phone || !type || !date || !time || !persons) {
+        alert('من فضلك املأ كل الحقول المطلوبة');
+        return;
+    }
+
+    // تنسيق الرسالة بشكل أنيق جدًا
+    let message = "★ حجز جديد من الموقع ★\n\n" +
+                  "الاسم: " + name + "\n" +
+                  "رقم التليفون: " + phone + "\n" +
+                  "────────────────────\n" +
+                  "نوع الحجز: " + type + "\n";
+
+    if (type === 'عيد ميلاد' && age) {
+        message += "العمر / عدد الشموع: " + age + "\n";
+    }
+
+    message += "التاريخ: " + date + "\n" +
+               "الوقت المطلوب: " + time + "\n" +
+               "عدد الأفراد: " + persons + "\n";
+
+    if (location) {
+        message += "مكان الطاولة المفضل: " + location + "\n";
+    }
+
+    if (notes) {
+        message += "────────────────────\n" +
+                   "ملاحظات إضافية:\n" + notes + "\n";
+    }
+
+    message += "\nشكرًا ليكم! نستناكم قريب 💙";
+
+    // فتح واتساب بالرسالة المنسقة
+    const whatsappUrl = "https://wa.me/201105263199?text=" + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank');
+}
+    
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
